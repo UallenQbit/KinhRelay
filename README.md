@@ -17,7 +17,7 @@
 - TLS 加密隧道
 - WS 加密隧道
 - WSS 加密隧道
-- QUIC 加密隧道
+- QUIC (0RTT) 加密隧道
 
 # HTTP-API 文档
 点击查看 HTTP-API 文档 [频道](https://github.com/UallenQbit/KinhRelay/blob/main/HTTP-API.md)
