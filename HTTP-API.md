@@ -1,4 +1,31 @@
+---
+title: KinhRelay v1.0.0
+language_tabs:
+  - shell: Shell
+  - http: HTTP
+  - javascript: JavaScript
+  - ruby: Ruby
+  - python: Python
+  - php: PHP
+  - java: Java
+  - go: Go
+toc_footers: []
+includes: []
+search: true
+code_clipboard: true
+highlight_theme: darkula
+headingLevel: 2
+generator: "@tarslib/widdershins v4.0.17"
+
+---
+
 # KinhRelay
+
+> v1.0.0
+
+Base URLs:
+
+# Default
 
 ## PUT 插入队列
 
@@ -12,8 +39,11 @@ PUT /Relay.php
   "Listen_Port": 9800,
   "Remote_Address": "127.0.0.1",
   "Remote_Port": 9808,
-  "MaxSpeed": 1048576,
-  "MaxConnect": 128
+  "MaxSpeed": 0,
+  "MaxConnect": 0,
+  "IPWhiteList": [
+    "127.0.0.1"
+  ]
 }
 ```
 
@@ -21,12 +51,14 @@ PUT /Relay.php
 
 |名称|位置|类型|必选|中文名|说明|
 |---|---|---|---|---|---|
+|body|body|object| 否 ||none|
 |» Listen_Address|body|string| 是 | 监听地址|监听地址|
 |» Listen_Port|body|integer| 是 | 监听端口|监听端口|
 |» Remote_Address|body|string| 是 | 远程地址|远程地址|
 |» Remote_Port|body|integer| 是 | 远程端口|远程端口|
 |» MaxSpeed|body|integer| 是 | 最大速率|最大速率|
 |» MaxConnect|body|integer| 是 | 最大连接数|最大连接数|
+|» IPWhiteList|body|[string]| 是 | IP白名单|IP白名单|
 
 > 返回示例
 
@@ -121,6 +153,7 @@ DELETE /Relay.php
 
 |名称|位置|类型|必选|中文名|说明|
 |---|---|---|---|---|---|
+|body|body|object| 否 ||none|
 |» Listen_Port|body|integer| 是 | 监听端口|监听端口|
 
 > 返回示例
@@ -159,9 +192,12 @@ PATCH /Relay.php
 {
   "Listen_Port": 9800,
   "Remote_Address": "127.0.0.1",
-  "Remote_Port": 9809,
-  "MaxSpeed": 1048576,
-  "MaxConnect": 128
+  "Remote_Port": 9808,
+  "MaxSpeed": 0,
+  "MaxConnect": 0,
+  "IPWhiteList": [
+    "127.0.0.1"
+  ]
 }
 ```
 
@@ -169,11 +205,13 @@ PATCH /Relay.php
 
 |名称|位置|类型|必选|中文名|说明|
 |---|---|---|---|---|---|
+|body|body|object| 否 ||none|
 |» Listen_Port|body|integer| 是 | 监听端口|监听端口|
 |» Remote_Address|body|string| 是 | 远程地址|远程地址|
 |» Remote_Port|body|integer| 是 | 远程端口|远程端口|
 |» MaxSpeed|body|integer| 是 | 最大速率|最大速率|
 |» MaxConnect|body|integer| 是 | 最大连接数|最大连接数|
+|» IPWhiteList|body|[string]| 是 | IP白名单|IP白名单|
 
 > 返回示例
 
