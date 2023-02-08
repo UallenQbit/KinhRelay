@@ -25,6 +25,9 @@
 - WSS 加密隧道
 - QUIC (0RTT) 加密隧道
 
+# 怎么加快更新
+在群里催更岛主
+
 # HTTP-API 文档
 点击查看 HTTP-API 文档 [查看](https://github.com/UallenQbit/KinhRelay/blob/main/HTTP-API.md)
 
