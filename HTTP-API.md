@@ -122,8 +122,11 @@ GET /Relay.php
     "MaxSpeed": 0,
     "MaxConnect": 0,
     "ShieldAgreement": {
-      "NonTLS": false,
-      "Socks5": false
+      "Socks5": false,
+      "TLS": {
+        "But": false,
+        "Not": false
+      }
     },
     "IPWhiteList": [
       "127.0.0.1"
