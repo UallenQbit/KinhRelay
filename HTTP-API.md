@@ -41,6 +41,13 @@ PUT /Relay.php
   "Remote_Port": 9808,
   "MaxSpeed": 0,
   "MaxConnect": 0,
+  "ShieldAgreement": {
+    "Socks5": false,
+    "TLS": {
+      "But": false,
+      "Not": false
+    }
+  },
   "IPWhiteList": [
     "127.0.0.1"
   ]
@@ -58,6 +65,11 @@ PUT /Relay.php
 |» Remote_Port|body|integer| 是 | 远程端口|远程端口|
 |» MaxSpeed|body|integer| 是 | 最大速率|最大速率|
 |» MaxConnect|body|integer| 是 | 最大连接数|最大连接数|
+|» ShieldAgreement|body|object| 是 | 屏蔽协议|屏蔽协议|
+|»» Socks5|body|boolean| 是 | 是否屏蔽Socks5协议|是否屏蔽Socks5协议|
+|»» TLS|body|object| 是 | 屏蔽TLS协议|屏蔽TLS协议|
+|»»» But|body|boolean| 是 | 是否屏蔽TLS协议|是否屏蔽TLS协议|
+|»»» Not|body|boolean| 是 | 是否屏蔽非TLS协议|是否屏蔽非TLS协议|
 |» IPWhiteList|body|[string]| 是 | IP白名单|IP白名单|
 
 > 返回示例
@@ -149,8 +161,10 @@ GET /Relay.php
 |»» MaxSpeed|integer|true|none|最大速率|最大速率|
 |»» MaxConnect|integer|true|none|最大连接数|最大连接数|
 |»» ShieldAgreement|object|true|none|屏蔽协议|屏蔽协议|
-|»»» NonTLS|boolean|true|none||none|
-|»»» Socks5|boolean|true|none||none|
+|»»» Socks5|boolean|true|none|是否屏蔽Socks5协议|是否屏蔽Socks5协议|
+|»»» TLS|object|true|none|屏蔽TLS协议|屏蔽TLS协议|
+|»»»» But|boolean|true|none|是否屏蔽TLS协议|是否屏蔽TLS协议|
+|»»»» Not|boolean|true|none|是否屏蔽非TLS协议|是否屏蔽非TLS协议|
 |»» IPWhiteList|[string]|true|none|IP白名单|IP白名单|
 |»» Delay|object|true|none|延迟|延迟|
 |»»» StartTime|integer|true|none|连接开始时间|连接开始时间|
@@ -219,6 +233,13 @@ PATCH /Relay.php
   "Remote_Port": 9808,
   "MaxSpeed": 0,
   "MaxConnect": 0,
+  "ShieldAgreement": {
+    "Socks5": false,
+    "TLS": {
+      "But": false,
+      "Not": false
+    }
+  },
   "IPWhiteList": [
     "127.0.0.1"
   ]
@@ -235,6 +256,11 @@ PATCH /Relay.php
 |» Remote_Port|body|integer| 是 | 远程端口|远程端口|
 |» MaxSpeed|body|integer| 是 | 最大速率|最大速率|
 |» MaxConnect|body|integer| 是 | 最大连接数|最大连接数|
+|» ShieldAgreement|body|object| 是 | 屏蔽协议|屏蔽协议|
+|»» Socks5|body|boolean| 是 | 是否屏蔽Socks5协议|是否屏蔽Socks5协议|
+|»» TLS|body|object| 是 | 屏蔽TLS协议|屏蔽TLS协议|
+|»»» But|body|boolean| 是 | 是否屏蔽TLS协议|是否屏蔽TLS协议|
+|»»» Not|body|boolean| 是 | 是否屏蔽非TLS协议|是否屏蔽非TLS协议|
 |» IPWhiteList|body|[string]| 是 | IP白名单|IP白名单|
 
 > 返回示例
