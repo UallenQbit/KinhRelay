@@ -20,17 +20,20 @@
 - 连接IP白名单
 
 # 待完成
+
 - TLS 加密隧道
 - WS 加密隧道
 - WSS 加密隧道
 - QUIC (0RTT) 加密隧道
 
-# 怎么加快更新
-在群里催更岛主
-
 # HTTP-API 文档
 点击查看 HTTP-API 文档 [查看](https://github.com/UallenQbit/KinhRelay/blob/main/HTTP-API.md)
 
+# 队列生效时间
+1秒完成
+
+# 怎么加快更新
+在 [交流群](https://t.me/KinhDownChat) 呼叫岛主进行催更
 
 # 启动
 
@@ -39,27 +42,7 @@
 ```
 
 ```
-/root/KinhRelay-linux-386 -API_Address="[HTTP-API监听地址]" -API_Port=[HTTP-API监听端口] -API_Path="[HTTP-API路径]"
-```
-
-```
 /root/KinhRelay-linux-amd64 -API_Address="[HTTP-API监听地址]" -API_Port=[HTTP-API监听端口] -API_Path="[HTTP-API路径]"
-```
-
-```
-/root/KinhRelay-linux-arm -API_Address="[HTTP-API监听地址]" -API_Port=[HTTP-API监听端口] -API_Path="[HTTP-API路径]"
-```
-
-```
-/root/KinhRelay-linux-arm64 -API_Address="[HTTP-API监听地址]" -API_Port=[HTTP-API监听端口] -API_Path="[HTTP-API路径]"
-```
-
-```
-D:\KinhRelay-windows-386.exe -API_Address="[HTTP-API监听地址]" -API_Port=[HTTP-API监听端口] -API_Path="[HTTP-API路径]"
-```
-
-```
-D:\KinhRelay-windows-amd64.exe -API_Address="[HTTP-API监听地址]" -API_Port=[HTTP-API监听端口] -API_Path="[HTTP-API路径]"
 ```
 
 # 性能
