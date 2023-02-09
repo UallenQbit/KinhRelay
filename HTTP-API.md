@@ -107,8 +107,22 @@ GET /Relay.php
     "Listen_Port": 9800,
     "Remote_Address": "127.0.0.1",
     "Remote_Port": 9808,
-    "MaxSpeed": 1048576,
-    "MaxConnect": 128
+    "MaxSpeed": 0,
+    "MaxConnect": 0,
+    "ShieldAgreement": {
+      "NonTLS": false,
+      "Socks5": false
+    },
+    "IPWhiteList": [
+      "127.0.0.1"
+    ],
+    "Delay": {
+      "StartTime": 0,
+      "EndTime": 0,
+      "MicroSeconds": 0
+    },
+    "Flow": 0,
+    "Error": "正常"
   },
   "Message": "成功",
   "Status": 0
@@ -134,6 +148,16 @@ GET /Relay.php
 |»» Remote_Port|integer|true|none|远程端口|远程端口|
 |»» MaxSpeed|integer|true|none|最大速率|最大速率|
 |»» MaxConnect|integer|true|none|最大连接数|最大连接数|
+|»» ShieldAgreement|object|true|none|屏蔽协议|屏蔽协议|
+|»»» NonTLS|boolean|true|none||none|
+|»»» Socks5|boolean|true|none||none|
+|»» IPWhiteList|[string]|true|none|IP白名单|IP白名单|
+|»» Delay|object|true|none|延迟|延迟|
+|»»» StartTime|integer|true|none|连接开始时间|连接开始时间|
+|»»» EndTime|integer|true|none|连接完成时间|连接完成时间|
+|»»» MicroSeconds|integer|true|none|毫秒|毫秒|
+|»» Flow|integer|true|none|流量|流量|
+|»» Error|string|true|none|错误|错误|
 |» Message|string|true|none|信息|信息|
 |» Status|integer|true|none|状态|状态|
 
